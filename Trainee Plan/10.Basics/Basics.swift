@@ -155,6 +155,39 @@ class Basics {
         }
     }
     
+    func optionalType() {
+        
+        //переменные опционального типа
+        var boolOptional: Bool? //nil
+        
+        //способы извлечения опционального значения
+        //принудительное извлечение force unwrapping
+        //косвенное извлечение implicitly unwrapping
+        //
+        
+        //ПРИНУДИТЕЛЬНО ИЗВЛЕЧЕНИЕ force unwrapping
+        var optInt: Int? = 12
+        var int: Int = 34
+        let result = optInt! + int
+        
+        
+        //КОСВЕННОЕ ИЗВЛЕЧЕНИЕ implicitly unwrapping
+        var optDouble: Double! = 3.14
+        
+        
+        //ОПЦИОНАЛЬНОЕ СВЯЗЫВАНИЕ
+        
+        let optionalName: String? = "Bob"
+        
+        print(optionalName) //это опасно
+        
+        if let username = optionalName { //это не опасно
+            print(username)
+        }
+            
+        
+    }
+    
     
     
 }

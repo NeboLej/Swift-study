@@ -9,9 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var basic = Basics()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        basic.dataTypes()
+        
     }
 
 
