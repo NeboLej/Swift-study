@@ -58,7 +58,7 @@
 		D45B88D12718643900DF470F /* Trainee Plan */ = {
 			isa = PBXGroup;
 			children = (
-				D45B88E72718674800DF470F /* 10 */,
+				D45B88E72718674800DF470F /* 10.Basics */,
 				D45B88E62718644E00DF470F /* System */,
 			);
 			path = "Trainee Plan";
@@ -78,12 +78,12 @@
 			path = System;
 			sourceTree = "<group>";
 		};
-		D45B88E72718674800DF470F /* 10 */ = {
+		D45B88E72718674800DF470F /* 10.Basics */ = {
 			isa = PBXGroup;
 			children = (
 				D45B88E82718677700DF470F /* Basics.swift */,
 			);
-			path = 10;
+			path = 10.Basics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

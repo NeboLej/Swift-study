@@ -85,18 +85,78 @@ class Basics {
         // Утверждеине (глобальная функция assert(_:_:))
         // Оператор усовия if
         // Оператор ветвления swith
-        // Операторы поаторения while и repeat while
+        // Операторы повторения while и repeat while
         // Оператор повторения for
         // Оператор раннего выхода guard
         
-        // утверждение
+        // УТВЕРЖДЕНИЕ
         // сравнивает 2 значение и в случае false роняет программу
         let age = 100
         assert(age > 100, "программа упала")
         
         
+        //ОПЕРАТОР УСЛОВИЯ
+        //Обыяный синтаксис
+        if 100>200 {
+            print("1")
+        } else if 100>150 {
+            print("2")
+        } else {
+            print("3")
+        }
         
+        //тернарный оператор условия
+        // проверяемое_выражение ? выражение_1 : выражение_2
+        let a = 1
+        let b = 2
+        a < b ? print("A меньше B") : print("A Больше B")
+        
+        //ОПЕРАТОР ВЕТВЛЕНИЯ
+        let userMark = 4
+        
+        switch userMark {
+            case 1,2:
+                print("case1")
+            case 3:
+                print("case2")
+            case 4,5:
+                print("case4")
+            default:
+                print("not case")
+        }
+        
+        //ОПЕРАТОРЫ ПОВТОРЕНИЯ WHILE
+        var i = 1
+        while i < 10 {
+            i += 1
+        }
+        
+        i = 0
+        repeat {
+            i += 1
+        } while i < 10
+        
+        //ОПЕРАТОР ПОВТОРЕНИЯ FOR
+        for element in [1, 2, 3, 4, 5] {
+            print(element)
+        }
+        
+        var result = 0
+        for i in 1...10 where i % 2 == 0 {
+            result += 1
+        }
+        
+        [1, 2, 3, 4, 5].forEach { print($0) }
+        
+        //ОПЕРАТОР ДОСРОЯНОГО ВЫХОДА
+        //выполняет тело только если условие возвражает false
+        guard 1>0 else {
+            //тело
+        }
     }
     
+    
+    
 }
+
 
