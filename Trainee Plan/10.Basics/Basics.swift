@@ -189,6 +189,37 @@ class Basics {
     }
     
     
+    func function() {
+        //функции есть функции, говорить нечего
+    }
+    
+    
+    func closure() {
+        //замыкания
+        
+        let functionINLet = { return true }
+        functionINLet()
+        let closure1: (String) -> () = { text in
+            print(text)
+        }
+        let closure2:([Int]) -> Bool = { array in
+            for i in array {
+                print(i)
+            }
+            return true
+        }
+        
+        let result = closireTest(closure1: closure1, closure2: closure2)
+        
+        
+    }
+    
+    private func closireTest(closure1: (String)->(), closure2: ([Int]) -> Bool ) -> Int {
+        closure2([10, 20, 30])
+        closure1("hi")
+        return 10
+    }
+    
     
 }
 
