@@ -40,6 +40,7 @@ class ViewController: UIViewController {
     @objc func tapButton() {
         print("pushViewController_2")
         let newVC = ViewController2()
+        newVC.label = "text"
         self.navigationController?.pushViewController(newVC, animated: true)
         
     }
