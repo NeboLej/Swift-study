@@ -1,33 +1,31 @@
 //
-//  ViewController.swift
+//  ViewController2.swift
 //  Trainee Plan
 //
-//  Created by Anton Pakhomov on 14.10.2021.
+//  Created by Anton Pakhomov on 18.10.2021.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    var basic = Basics()
+class ViewController2: UIViewController {
+    
     lazy var button = initButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .purple
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .orange
         view.addSubview(button)
         initConstraints()
-        basic.dataTypes()
+        
         
     }
+        
     
     func initConstraints() {
         NSLayoutConstraint.activate([button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                                      button.centerYAnchor.constraint(equalTo: view.centerYAnchor)])
     }
     
-
     func initButton() -> UIButton {
         let button = UIButton()
         button.tintColor = .white
@@ -38,10 +36,10 @@ class ViewController: UIViewController {
     }
     
     @objc func tapButton() {
-        print("pushViewController_2")
-        let newVC = ViewController2()
+        print("pushViewController_1")
+        let newVC = ViewController()
         self.navigationController?.pushViewController(newVC, animated: true)
         
     }
+    
 }
-
