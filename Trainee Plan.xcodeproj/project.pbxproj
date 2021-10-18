@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D43C3386271DA612009CF824 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C3385271DA612009CF824 /* ViewController2.swift */; };
 		D45B88D32718643900DF470F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45B88D22718643900DF470F /* AppDelegate.swift */; };
 		D45B88D52718643900DF470F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45B88D42718643900DF470F /* SceneDelegate.swift */; };
 		D45B88D72718643900DF470F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45B88D62718643900DF470F /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D43C3385271DA612009CF824 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		D45B88CF2718643900DF470F /* Trainee Plan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trainee Plan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45B88D22718643900DF470F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D45B88D42718643900DF470F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				D45B88DB2718643A00DF470F /* Assets.xcassets */,
 				D45B88DD2718643A00DF470F /* LaunchScreen.storyboard */,
 				D45B88E02718643A00DF470F /* Info.plist */,
+				D43C3385271DA612009CF824 /* ViewController2.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D43C3386271DA612009CF824 /* ViewController2.swift in Sources */,
 				D45B88E92718677700DF470F /* Basics.swift in Sources */,
 				D45B88D72718643900DF470F /* ViewController.swift in Sources */,
 				D45B88D32718643900DF470F /* AppDelegate.swift in Sources */,
