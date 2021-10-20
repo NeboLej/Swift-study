@@ -28,6 +28,7 @@ class CountryVC: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.backgroundColor = .black
         tableView.register(CountryTVCell.self, forCellReuseIdentifier: "TableCell")
         return tableView
     }()
@@ -68,7 +69,6 @@ class CountryVC: UIViewController {
         for i in Data.data {
             let country = CountryModel(name: i[0], flag: i[1], population: i[2])
             array.append(country)
-            print(country.name)
         }
         return array
     }
@@ -79,7 +79,6 @@ class CountryVC: UIViewController {
 extension CountryVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
         currentModel = arrayCountry[indexPath.row]
         tableView.reloadData()
     }
@@ -122,6 +121,8 @@ extension CountryVC: UITableViewDataSource, UITableViewDelegate {
         default:
             print("EROOOOOOR")
         }
+        cell.backgroundColor = .black
+        cell.textLabel?.textColor = .white
         return cell
     }
     
