@@ -11,7 +11,7 @@ struct CountryModel {
     
     let name: String
     let flag: String
-    let population: Int
+    let population: String
     
     
 }
