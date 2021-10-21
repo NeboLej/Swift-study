@@ -12,6 +12,7 @@ struct CountryModel {
     let name: String
     let flag: String
     let population: String
+    let capital: String
     
     
 }
