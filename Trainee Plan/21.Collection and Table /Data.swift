@@ -9,12 +9,12 @@ import Foundation
 
 struct Data {
     static let data: [[String]] = [
-    ["Russia", "ru", "144 100 000"],
-    ["Romania", "ro", "19 290 000"],
-    ["Burkina Faso", "bf", "20 900 000"],
-    ["Somalia", "so", "15 890 000"],
-    ["Chad", "td", "16 430 000"],
-    ["South Korea", "kr", "51 780 000"]
+    ["Russia", "ru", "144 100 000", "Moscow"],
+    ["Romania", "ro", "19 290 000", "Bucharest"],
+    ["Burkina Faso", "bf", "20 900 000", "Ouagadougou"],
+    ["Somalia", "so", "15 890 000", "Mogadishu"],
+    ["Chad", "td", "16 430 000", "N'Djamena"],
+    ["South Korea", "kr", "51 780 000", "Seoul"]
     ]
     
 }

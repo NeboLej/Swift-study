@@ -9,6 +9,7 @@ import UIKit
 
 class CountryVC: UIViewController {
     private let layout = UICollectionViewFlowLayout()
+    let cellSpacingHeight: CGFloat = 15.0
     
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -34,7 +35,7 @@ class CountryVC: UIViewController {
     }()
     
     lazy var arrayCountry: [CountryModel] = initArray()
-    var currentModel: CountryModel = CountryModel(name: "", flag: "", population: "")
+    var currentModel: CountryModel = CountryModel(name: "", flag: "", population: "", capital: "")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,7 @@ class CountryVC: UIViewController {
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 25
         
+        tableView.rowHeight = 30
         view.addSubview(collectionView)
         view.addSubview(tableView)
         initConstraints()
@@ -67,7 +69,7 @@ class CountryVC: UIViewController {
     func initArray() -> [CountryModel] {
         var array: [CountryModel] = []
         for i in Data.data {
-            let country = CountryModel(name: i[0], flag: i[1], population: i[2])
+            let country = CountryModel(name: i[0], flag: i[1], population: i[2], capital: i[3])
             array.append(country)
         }
         return array
@@ -107,24 +109,31 @@ extension CountryVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
 extension CountryVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as! CountryTVCell
         switch indexPath.row {
-        case 0: cell.textLabel?.text = currentModel.name
-                cell.accessoryType = .detailButton
-        case 1: cell.textLabel?.text = currentModel.population
-                cell.accessoryType = .detailButton
+        case 0: cell.name.text = currentModel.name
+                //cell.accessoryType = .detailButton
+        case 1: cell.name.text = currentModel.population
+                //cell.accessoryType = .detailButton
+        case 2: cell.name.text = currentModel.capital
         default:
             print("EROOOOOOR")
         }
         cell.backgroundColor = .black
         cell.textLabel?.textColor = .white
+        cell.layer.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
+        cell.color = UIColor(displayP3Red: CGFloat.random(in: 0...1 ), green: CGFloat.random(in: 0...1 ), blue: CGFloat.random(in: 0...1 ), alpha: 1)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+            return 200
+        }
     
     
 }
