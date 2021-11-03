@@ -20,7 +20,7 @@ class CountryCVCell: UICollectionViewCell {
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(label)
+       // addSubview(label)
         addSubview(imageView)
 
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -29,9 +29,9 @@ class CountryCVCell: UICollectionViewCell {
         imageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         imageView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        //label.translatesAutoresizingMaskIntoConstraints = false
+        //label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        //label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
         
     }
