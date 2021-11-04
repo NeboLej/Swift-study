@@ -20,6 +20,7 @@
 		D45B88DC2718643A00DF470F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45B88DB2718643A00DF470F /* Assets.xcassets */; };
 		D45B88DF2718643A00DF470F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45B88DD2718643A00DF470F /* LaunchScreen.storyboard */; };
 		D45B88E92718677700DF470F /* Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45B88E82718677700DF470F /* Basics.swift */; };
+		D466F5702732CE4500DF60E9 /* AnimationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466F56F2732CE4500DF60E9 /* AnimationsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D45B88DE2718643A00DF470F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D45B88E02718643A00DF470F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D45B88E82718677700DF470F /* Basics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basics.swift; sourceTree = "<group>"; };
+		D466F56F2732CE4500DF60E9 /* AnimationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		D45B88D12718643900DF470F /* Trainee Plan */ = {
 			isa = PBXGroup;
 			children = (
+				D466F56E2732CE2600DF60E9 /* 22.Animations */,
 				D43DBFFD271EE73800740A77 /* 21.Collection and Table  */,
 				D45B88E72718674800DF470F /* 10.Basics */,
 				D45B88E62718644E00DF470F /* System */,
@@ -110,6 +113,14 @@
 				D45B88E82718677700DF470F /* Basics.swift */,
 			);
 			path = 10.Basics;
+			sourceTree = "<group>";
+		};
+		D466F56E2732CE2600DF60E9 /* 22.Animations */ = {
+			isa = PBXGroup;
+			children = (
+				D466F56F2732CE4500DF60E9 /* AnimationsVC.swift */,
+			);
+			path = 22.Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D466F5702732CE4500DF60E9 /* AnimationsVC.swift in Sources */,
 				D43DC001271EF37100740A77 /* Data.swift in Sources */,
 				D43C3386271DA612009CF824 /* ViewController2.swift in Sources */,
 				D440714027206B8F00314138 /* CountryTVCell.swift in Sources */,

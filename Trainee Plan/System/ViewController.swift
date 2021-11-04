@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         view.addSubview(button)
         initConstraints()
         basic.dataTypes()
-        
+
     }
     
     func initConstraints() {
