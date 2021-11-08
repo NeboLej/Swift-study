@@ -21,6 +21,10 @@
 		D45B88DF2718643A00DF470F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45B88DD2718643A00DF470F /* LaunchScreen.storyboard */; };
 		D45B88E92718677700DF470F /* Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45B88E82718677700DF470F /* Basics.swift */; };
 		D466F5702732CE4500DF60E9 /* AnimationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466F56F2732CE4500DF60E9 /* AnimationsVC.swift */; };
+		D4AAE592273947CE0063D486 /* URLSessionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE591273947CE0063D486 /* URLSessionVC.swift */; };
+		D4AAE596273950BF0063D486 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE595273950BF0063D486 /* DataModel.swift */; };
+		D4AAE59827395AB80063D486 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE59727395AB80063D486 /* Cell.swift */; };
+		D4AAE59A2739643C0063D486 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE5992739643C0063D486 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		D45B88E02718643A00DF470F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D45B88E82718677700DF470F /* Basics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basics.swift; sourceTree = "<group>"; };
 		D466F56F2732CE4500DF60E9 /* AnimationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsVC.swift; sourceTree = "<group>"; };
+		D4AAE591273947CE0063D486 /* URLSessionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionVC.swift; sourceTree = "<group>"; };
+		D4AAE595273950BF0063D486 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		D4AAE59727395AB80063D486 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		D4AAE5992739643C0063D486 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,7 @@
 		D45B88D12718643900DF470F /* Trainee Plan */ = {
 			isa = PBXGroup;
 			children = (
+				D4AAE58F2739475D0063D486 /* 15.Networking */,
 				D466F56E2732CE2600DF60E9 /* 22.Animations */,
 				D43DBFFD271EE73800740A77 /* 21.Collection and Table  */,
 				D45B88E72718674800DF470F /* 10.Basics */,
@@ -121,6 +130,25 @@
 				D466F56F2732CE4500DF60E9 /* AnimationsVC.swift */,
 			);
 			path = 22.Animations;
+			sourceTree = "<group>";
+		};
+		D4AAE58F2739475D0063D486 /* 15.Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D4AAE5902739478A0063D486 /* URLSession */,
+			);
+			path = 15.Networking;
+			sourceTree = "<group>";
+		};
+		D4AAE5902739478A0063D486 /* URLSession */ = {
+			isa = PBXGroup;
+			children = (
+				D4AAE591273947CE0063D486 /* URLSessionVC.swift */,
+				D4AAE595273950BF0063D486 /* DataModel.swift */,
+				D4AAE59727395AB80063D486 /* Cell.swift */,
+				D4AAE5992739643C0063D486 /* NetworkManager.swift */,
+			);
+			path = URLSession;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,13 +224,17 @@
 			files = (
 				D466F5702732CE4500DF60E9 /* AnimationsVC.swift in Sources */,
 				D43DC001271EF37100740A77 /* Data.swift in Sources */,
+				D4AAE592273947CE0063D486 /* URLSessionVC.swift in Sources */,
 				D43C3386271DA612009CF824 /* ViewController2.swift in Sources */,
 				D440714027206B8F00314138 /* CountryTVCell.swift in Sources */,
 				D45B88E92718677700DF470F /* Basics.swift in Sources */,
+				D4AAE596273950BF0063D486 /* DataModel.swift in Sources */,
 				D43DBFFF271EF27A00740A77 /* CountryModel.swift in Sources */,
 				D45B88D72718643900DF470F /* ViewController.swift in Sources */,
+				D4AAE59827395AB80063D486 /* Cell.swift in Sources */,
 				D43DC005271EF53700740A77 /* CountryCVCell.swift in Sources */,
 				D45B88D32718643900DF470F /* AppDelegate.swift in Sources */,
+				D4AAE59A2739643C0063D486 /* NetworkManager.swift in Sources */,
 				D45B88D52718643900DF470F /* SceneDelegate.swift in Sources */,
 				D43DC003271EF4D600740A77 /* CountryVC.swift in Sources */,
 			);
