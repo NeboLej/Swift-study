@@ -25,6 +25,7 @@
 		D4AAE596273950BF0063D486 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE595273950BF0063D486 /* DataModel.swift */; };
 		D4AAE59827395AB80063D486 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE59727395AB80063D486 /* Cell.swift */; };
 		D4AAE59A2739643C0063D486 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE5992739643C0063D486 /* NetworkManager.swift */; };
+		D4AAE59C2739960B0063D486 /* WebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE59B2739960B0063D486 /* WebSocketService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		D4AAE595273950BF0063D486 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		D4AAE59727395AB80063D486 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		D4AAE5992739643C0063D486 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D4AAE59B2739960B0063D486 /* WebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				D4AAE595273950BF0063D486 /* DataModel.swift */,
 				D4AAE59727395AB80063D486 /* Cell.swift */,
 				D4AAE5992739643C0063D486 /* NetworkManager.swift */,
+				D4AAE59B2739960B0063D486 /* WebSocketService.swift */,
 			);
 			path = URLSession;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				D4AAE596273950BF0063D486 /* DataModel.swift in Sources */,
 				D43DBFFF271EF27A00740A77 /* CountryModel.swift in Sources */,
 				D45B88D72718643900DF470F /* ViewController.swift in Sources */,
+				D4AAE59C2739960B0063D486 /* WebSocketService.swift in Sources */,
 				D4AAE59827395AB80063D486 /* Cell.swift in Sources */,
 				D43DC005271EF53700740A77 /* CountryCVCell.swift in Sources */,
 				D45B88D32718643900DF470F /* AppDelegate.swift in Sources */,
