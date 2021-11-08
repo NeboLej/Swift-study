@@ -47,4 +47,30 @@ class NetworkManager {
         }.resume()
     }
     
+    func postReqest(parametrs: [String : String]) {
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
+
+        var reqest = URLRequest(url: url)
+        reqest.httpMethod = "POST"
+        reqest.addValue("application/json", forHTTPHeaderField: "Content-Type") //дак джейсон нормально воспринимает словари
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: parametrs, options: []) else { return }
+        reqest.httpBody = httpBody
+        
+        session.dataTask(with: reqest) { (data, response, error) in
+            if let response = response {
+                print(response)
+            }
+            
+            guard let data = data else {
+                return
+            }
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                print(json)
+            } catch {
+                print(error)
+            }
+        }.resume()
+    }
+    
 }

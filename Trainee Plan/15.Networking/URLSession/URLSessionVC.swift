@@ -31,6 +31,16 @@ class URLSessionVC: UIViewController {
         return button
     }()
     
+    lazy var buttonPost: UIButton = {
+        var button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("POST", for: .normal)
+        button.backgroundColor = .systemMint
+        button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(tapPostButton), for: .touchUpInside)
+        return button
+    }()
+    
     let networkManager = NetworkManager()
   
     override func viewDidLoad() {
@@ -54,8 +64,13 @@ class URLSessionVC: UIViewController {
         }
     }
     
+    @objc func tapPostButton() {
+        networkManager.postReqest(parametrs: ["name" : "ivan", "Message": "Hello"])
+    }
+    
     func addSubviews() {
         view.addSubview(buttonGet)
+        view.addSubview(buttonPost)
         view.addSubview(tableView)
     }
     
@@ -65,6 +80,11 @@ class URLSessionVC: UIViewController {
             buttonGet.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             buttonGet.heightAnchor.constraint(equalToConstant: 30),
             buttonGet.widthAnchor.constraint(equalToConstant: 50),
+            
+            buttonPost.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            buttonPost.leadingAnchor.constraint(equalTo: buttonGet.trailingAnchor, constant: 10),
+            buttonPost.heightAnchor.constraint(equalToConstant: 30),
+            buttonPost.widthAnchor.constraint(equalToConstant: 50),
             
             tableView.topAnchor.constraint(equalTo: buttonGet.bottomAnchor, constant: 20),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
