@@ -17,24 +17,56 @@ class URLSessionVC: UIViewController {
         tableView.register(Cell.self, forCellReuseIdentifier: "Cell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
+        //tableView.isHidden = true
         return tableView
     }()
+    
+    lazy var buttonGet: UIButton = {
+        var button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("GET", for: .normal)
+        button.backgroundColor = .systemMint
+        button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(tapGetButton), for: .touchUpInside)
+        return button
+    }()
+    
+    let networkManager = NetworkManager()
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        //getReqest()
-        
         addSubviews()
         initConstraint()
+        view.backgroundColor = .white
+    }
+    
+    @objc func tapGetButton() {
+        networkManager.getReqest { [weak self] (result) in
+            switch result {
+            case .success(let data):
+                self?.dataSourse = data
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func addSubviews() {
+        view.addSubview(buttonGet)
         view.addSubview(tableView)
     }
     
     func initConstraint() {
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            buttonGet.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            buttonGet.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            buttonGet.heightAnchor.constraint(equalToConstant: 30),
+            buttonGet.widthAnchor.constraint(equalToConstant: 50),
+            
+            tableView.topAnchor.constraint(equalTo: buttonGet.bottomAnchor, constant: 20),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)

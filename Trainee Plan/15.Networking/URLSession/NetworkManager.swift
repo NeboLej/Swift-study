@@ -12,7 +12,7 @@ class NetworkManager {
     let decoder = JSONDecoder()
     
     
-    func getReqest(complition: @escaping (GetResult)->Void) {
+    func getReqest(complition: @escaping (GetResult) -> Void) {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else {
             return
         }
@@ -26,9 +26,10 @@ class NetworkManager {
             
             //блок defer сробатывает при любом ретерне
             defer {
-                complition(result)
+                DispatchQueue.main.async {
+                    complition(result)
+                }
             }
-            
             guard let strongSelf = self else {
                 result = .success(data: []) //можно тут вернкуть ошибку
                 return
