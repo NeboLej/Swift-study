@@ -11,13 +11,13 @@ class ViewController: UIViewController {
 
     
     lazy var button21: UIButton = {
-        var button = initButton(title: "22. Animation")
+        var button = initButton(title: "22 Animation")
         button.addTarget(self, action: #selector(goAnimationScreen), for: .touchUpInside)
         return button
     }()
     
     lazy var button22: UIButton = {
-        var button = initButton(title: "21. Collection & Table")
+        var button = initButton(title: "21 Collection & Table")
         button.addTarget(self, action: #selector(goTableViewScreen), for: .touchUpInside)
         return button
     }()
@@ -31,6 +31,12 @@ class ViewController: UIViewController {
     lazy var button152: UIButton = {
         var button = initButton(title: "15.2 WebSocket")
         button.addTarget(self, action: #selector(goWebSocketScreen), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var button153: UIButton = {
+        var button = initButton(title: "15.3 Rest Alamofire")
+        button.addTarget(self, action: #selector(goRestAlamofireScreen), for: .touchUpInside)
         return button
     }()
     
@@ -66,11 +72,9 @@ class ViewController: UIViewController {
     func fillInStackView() {
         stackView.addArrangedSubview(button151)
         stackView.addArrangedSubview(button152)
+        stackView.addArrangedSubview(button153)
         stackView.addArrangedSubview(button18)
         stackView.addArrangedSubview(button21)
-        stackView.addArrangedSubview(button22)
-        stackView.addArrangedSubview(button22)
-        stackView.addArrangedSubview(button22)
         stackView.addArrangedSubview(button22)
     }
         
@@ -122,6 +126,11 @@ class ViewController: UIViewController {
     @objc func goLifeCycleScreen() {
         let lifeCycleScreen = LifecycleVC()
         navigation(vc: lifeCycleScreen)
+    }
+    
+    @objc func goRestAlamofireScreen() {
+        let restAlamodireScreen = RestAlamofireVC()
+        navigation(vc: restAlamodireScreen)
     }
 
 }
