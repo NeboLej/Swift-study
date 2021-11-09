@@ -52,7 +52,7 @@ class NetworkManager {
 
         var reqest = URLRequest(url: url)
         reqest.httpMethod = "POST"
-        reqest.addValue("application/json", forHTTPHeaderField: "Content-Type") //дак джейсон нормально воспринимает словари
+        reqest.addValue("application/json", forHTTPHeaderField: "Content-Type") //так джейсон нормально воспринимает словари
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parametrs, options: []) else { return }
         reqest.httpBody = httpBody
         

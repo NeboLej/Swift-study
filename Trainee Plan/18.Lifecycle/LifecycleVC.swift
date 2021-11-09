@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController2: UIViewController {
+class LifecycleVC: UIViewController {
     
     lazy var button = initButton()
     var label: String? {
