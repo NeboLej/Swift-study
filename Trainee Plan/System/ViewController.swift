@@ -61,7 +61,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .purple
+        view.backgroundColor = .systemYellow
 
         view.addSubview(stackView)
         initConstraints()
@@ -92,8 +92,7 @@ class ViewController: UIViewController {
         let button = UIButton()
         button.tintColor = .white
         button.setTitle(title, for: .normal)
-        button.backgroundColor = .systemIndigo
-        button.layer.cornerRadius = 5
+        button.backgroundColor = .systemPurple
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }
@@ -101,7 +100,6 @@ class ViewController: UIViewController {
     func navigation(vc: UIViewController) {
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
     
     @objc func goAnimationScreen() {
         let aninationScreen = AnimationsVC()

@@ -14,48 +14,38 @@ class AnimationsVC: UIViewController {
     var count = 0
     
     lazy var button1: UIButton = {
-        var button = UIButton(type: .system)
-        button.setTitle("Button1", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 5.0
-        button.backgroundColor = .systemBlue
-        button.translatesAutoresizingMaskIntoConstraints = false
+        var button = initButton(label: "Button1")
         button.addTarget(self, action: #selector(tapButton1), for: .touchUpInside)
         return button
     }()
     
     lazy var button2: UIButton = {
-        var button = UIButton(type: .system)
-        button.setTitle("Button2", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 5.0
-        button.backgroundColor = .systemBlue
-        button.translatesAutoresizingMaskIntoConstraints = false
+        var button = initButton(label: "Button2")
         button.addTarget(self, action: #selector(tapButton2), for: .touchUpInside)
         return button
     }()
     
     lazy var button3: UIButton = {
-        var button = UIButton(type: .system)
-        button.setTitle("Button3", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 5.0
-        button.backgroundColor = .systemBlue
-        button.translatesAutoresizingMaskIntoConstraints = false
+        var button = initButton(label: "Button3")
         button.addTarget(self, action: #selector(tapButton3), for: .touchUpInside)
         return button
     }()
     
     lazy var button4: UIButton = {
-        var button = UIButton(type: .system)
-        button.setTitle("Button4", for: .normal)
+        var button = initButton(label: "Button4")
+        button.addTarget(self, action: #selector(tapButton4), for: .touchUpInside)
+        return button
+    }()
+    
+    func initButton(label: String)->UIButton {
+        let button = UIButton(type: .system)
+        button.setTitle(label, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 5.0
         button.backgroundColor = .systemBlue
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(tapButton4), for: .touchUpInside)
         return button
-    }()
+    }
     
     
     
@@ -63,7 +53,6 @@ class AnimationsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //view.backgroundColor = .systemPink
         view.backgroundColor = .white
         addSubviews()
         initConstraint()

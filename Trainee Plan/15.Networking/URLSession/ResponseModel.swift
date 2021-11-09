@@ -12,8 +12,7 @@ struct CurrencyModel: Codable {
     let time: Double
     let volume: Double
     let c: String?
-//     если поля названий не соответствуют json то создается енам
-//     где необходимо описать ВСЕ свойства, которые мы хотим получить
+
     enum CodingKeys: String, CodingKey {
         case symbol = "s"
         case price = "p"
