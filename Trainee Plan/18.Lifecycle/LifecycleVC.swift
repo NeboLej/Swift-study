@@ -99,7 +99,5 @@ class LifecycleVC: UIViewController {
         self.navigationController?.pushViewController(newVC, animated: true)
         
     }
-    
-    
-    
+  
 }

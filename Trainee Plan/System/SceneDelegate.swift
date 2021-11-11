@@ -51,6 +51,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This may occur due to temporary interruptions (ex. an incoming phone call).
         // вызывается когда сцена перехеодит из активного состояния в неактивное
         // это может произойти из за временных прерываний, например входящий звонок
+        // рекомендуется ставить любый активности экрана на паузу
         print("18.SceneDelegate sceneWillResignActive")
     }
 
@@ -68,8 +69,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
         // вызывается при переходе сцены от форграунда к фону
-        // используйте для сохранения данных, освобождения ресурсов и хранения достаточных ремурсов о стостоянии текущей сцены
+        // используйте для сохранения данных, освобождения ресурсов и хранения достаточных ресурсов о стостоянии текущей сцены
         // чтобы вернуть сцену к её текущему стостоянию
+        // apple говорит что не стоит надеется что этот метод вызавится и в нем сохранение не стоит
         print("18.SceneDelegate sceneDidEnterBackground")
     }
 
