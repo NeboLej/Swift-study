@@ -25,14 +25,16 @@ class NetworkManager {
             var result: GetResult
             
             //блок defer сробатывает при любом ретерне
+
+            guard let strongSelf = self else {
+                result = .success(data: []) //можно тут вернкуть ошибку
+                return
+            }
+            
             defer {
                 DispatchQueue.main.async {
                     complition(result)
                 }
-            }
-            guard let strongSelf = self else {
-                result = .success(data: []) //можно тут вернкуть ошибку
-                return
             }
             if error == nil, let parsData = data {
                 guard let arrayData = try?

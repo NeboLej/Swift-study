@@ -73,7 +73,6 @@ class WebSocketVC:  UIViewController, UIApplicationDelegate, WebSocketConnection
         DispatchQueue.main.async {
             self.decode(text: text)
         }
-        
     }
     func decode(text: String) {
         var response = ResponseModel(type: "", data: [])
@@ -86,7 +85,6 @@ class WebSocketVC:  UIViewController, UIApplicationDelegate, WebSocketConnection
         } catch {
             print("JSON no DATA")
         }
-        
     }
     
     func changeLabel(text: String) {
