@@ -33,6 +33,15 @@
 		D45B88DF2718643A00DF470F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45B88DD2718643A00DF470F /* LaunchScreen.storyboard */; };
 		D45B88E92718677700DF470F /* Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45B88E82718677700DF470F /* Basics.swift */; };
 		D466F5702732CE4500DF60E9 /* AnimationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466F56F2732CE4500DF60E9 /* AnimationsVC.swift */; };
+		D46C09242747A264000A91FD /* ExampleOfUseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C09232747A264000A91FD /* ExampleOfUseMock.swift */; };
+		D46C09282747A662000A91FD /* ExampleOfUseMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C09272747A662000A91FD /* ExampleOfUseMockTests.swift */; };
+		D46C092B2747A846000A91FD /* AdderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C092A2747A846000A91FD /* AdderMock.swift */; };
+		D46C092E2747C100000A91FD /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C092D2747C100000A91FD /* Networking.swift */; };
+		D46C09302747C292000A91FD /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C092F2747C292000A91FD /* NetworkingTests.swift */; };
+		D46C09362747F476000A91FD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C09352747F476000A91FD /* DataModel.swift */; };
+		D46C09382747FBDE000A91FD /* NetworkTests2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C09372747FBDE000A91FD /* NetworkTests2.swift */; };
+		D46C093B2747FFF4000A91FD /* URLSessionStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C093A2747FFF4000A91FD /* URLSessionStub.swift */; };
+		D46C093D274800F6000A91FD /* NetworlingTestsStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C093C274800F6000A91FD /* NetworlingTestsStub.swift */; };
 		D4AAE592273947CE0063D486 /* URLSessionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE591273947CE0063D486 /* URLSessionVC.swift */; };
 		D4AAE596273950BF0063D486 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE595273950BF0063D486 /* DataModel.swift */; };
 		D4AAE59827395AB80063D486 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE59727395AB80063D486 /* Cell.swift */; };
@@ -94,6 +103,15 @@
 		D45B88E02718643A00DF470F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D45B88E82718677700DF470F /* Basics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basics.swift; sourceTree = "<group>"; };
 		D466F56F2732CE4500DF60E9 /* AnimationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsVC.swift; sourceTree = "<group>"; };
+		D46C09232747A264000A91FD /* ExampleOfUseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleOfUseMock.swift; sourceTree = "<group>"; };
+		D46C09272747A662000A91FD /* ExampleOfUseMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleOfUseMockTests.swift; sourceTree = "<group>"; };
+		D46C092A2747A846000A91FD /* AdderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdderMock.swift; sourceTree = "<group>"; };
+		D46C092D2747C100000A91FD /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		D46C092F2747C292000A91FD /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
+		D46C09352747F476000A91FD /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		D46C09372747FBDE000A91FD /* NetworkTests2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests2.swift; sourceTree = "<group>"; };
+		D46C093A2747FFF4000A91FD /* URLSessionStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionStub.swift; sourceTree = "<group>"; };
+		D46C093C274800F6000A91FD /* NetworlingTestsStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworlingTestsStub.swift; sourceTree = "<group>"; };
 		D4AAE591273947CE0063D486 /* URLSessionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionVC.swift; sourceTree = "<group>"; };
 		D4AAE595273950BF0063D486 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		D4AAE59727395AB80063D486 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
@@ -190,13 +208,13 @@
 		D44CE83927455B1200311781 /* ProjectTESTS */ = {
 			isa = PBXGroup;
 			children = (
-				D44CE83A27455B1200311781 /* AppDelegate.swift */,
-				D44CE83C27455B1200311781 /* SceneDelegate.swift */,
+				D46C09392747FFCB000A91FD /* Stubs */,
+				D46C092C2747C0C0000A91FD /* System */,
+				D46C09292747A82B000A91FD /* Mocks */,
 				D44CE83E27455B1200311781 /* UnderTests.swift */,
-				D44CE84027455B1200311781 /* Main.storyboard */,
-				D44CE84327455B1300311781 /* Assets.xcassets */,
-				D44CE84527455B1300311781 /* LaunchScreen.storyboard */,
-				D44CE84827455B1300311781 /* Info.plist */,
+				D46C09232747A264000A91FD /* ExampleOfUseMock.swift */,
+				D46C092D2747C100000A91FD /* Networking.swift */,
+				D46C09352747F476000A91FD /* DataModel.swift */,
 			);
 			path = ProjectTESTS;
 			sourceTree = "<group>";
@@ -204,6 +222,10 @@
 		D44CE85027455B1300311781 /* ProjectTESTSTests */ = {
 			isa = PBXGroup;
 			children = (
+				D46C093C274800F6000A91FD /* NetworlingTestsStub.swift */,
+				D46C09372747FBDE000A91FD /* NetworkTests2.swift */,
+				D46C092F2747C292000A91FD /* NetworkingTests.swift */,
+				D46C09272747A662000A91FD /* ExampleOfUseMockTests.swift */,
 				D44CE85127455B1300311781 /* ProjectTESTSTests.swift */,
 			);
 			path = ProjectTESTSTests;
@@ -284,6 +306,35 @@
 				D466F56F2732CE4500DF60E9 /* AnimationsVC.swift */,
 			);
 			path = 22.Animations;
+			sourceTree = "<group>";
+		};
+		D46C09292747A82B000A91FD /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D46C092A2747A846000A91FD /* AdderMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D46C092C2747C0C0000A91FD /* System */ = {
+			isa = PBXGroup;
+			children = (
+				D44CE83A27455B1200311781 /* AppDelegate.swift */,
+				D44CE83C27455B1200311781 /* SceneDelegate.swift */,
+				D44CE84027455B1200311781 /* Main.storyboard */,
+				D44CE84327455B1300311781 /* Assets.xcassets */,
+				D44CE84527455B1300311781 /* LaunchScreen.storyboard */,
+				D44CE84827455B1300311781 /* Info.plist */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		D46C09392747FFCB000A91FD /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				D46C093A2747FFF4000A91FD /* URLSessionStub.swift */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		D4AAE58F2739475D0063D486 /* 15.Networking */ = {
@@ -550,9 +601,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46C092B2747A846000A91FD /* AdderMock.swift in Sources */,
 				D44CE83F27455B1200311781 /* UnderTests.swift in Sources */,
+				D46C09242747A264000A91FD /* ExampleOfUseMock.swift in Sources */,
+				D46C092E2747C100000A91FD /* Networking.swift in Sources */,
+				D46C093B2747FFF4000A91FD /* URLSessionStub.swift in Sources */,
 				D44CE83B27455B1200311781 /* AppDelegate.swift in Sources */,
 				D44CE83D27455B1200311781 /* SceneDelegate.swift in Sources */,
+				D46C09362747F476000A91FD /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +616,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46C09282747A662000A91FD /* ExampleOfUseMockTests.swift in Sources */,
+				D46C093D274800F6000A91FD /* NetworlingTestsStub.swift in Sources */,
+				D46C09382747FBDE000A91FD /* NetworkTests2.swift in Sources */,
+				D46C09302747C292000A91FD /* NetworkingTests.swift in Sources */,
 				D44CE85227455B1300311781 /* ProjectTESTSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,6 +723,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -691,6 +752,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -715,7 +777,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U6ZRGUARQA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ProjectTESTS/Info.plist;
+				INFOPLIST_FILE = ProjectTESTS/System/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -743,7 +805,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U6ZRGUARQA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ProjectTESTS/Info.plist;
+				INFOPLIST_FILE = ProjectTESTS/System/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -80,5 +80,32 @@ class ProjectTESTSTests: XCTestCase {
         //then
         XCTAssertEqual(expected, result)
     }
-
+    
+    func testAsyncValidateLoginTextFields() {
+        //given
+        let loginTF = UITextField()
+        let passwordTF = UITextField()
+        let expected = false
+        var result: Bool?
+        //для тестирования асинхронных методов используется expectation в конструкторе передаем то, как мы обозначаем тестируемый метод
+        let validExpectation = expectation(description: "Expectation in " + #function)
+        
+        //when
+        objectToTest.asyncValidateLoginTextFields(loginTF: loginTF, passwordTF: passwordTF) { isValid in
+            
+            result = isValid
+            
+            validExpectation.fulfill()  // встреча произошла
+        }
+        
+        //then
+        //проверяет завершились ли все expectation
+        waitForExpectations(timeout: 2.0) { error in
+            //если не все expectation отработали, то error cстанет != nil и тест упадет 
+            if error != nil {
+                XCTFail()
+            }
+            XCTAssertEqual(expected, result)
+        }
+    }
 }

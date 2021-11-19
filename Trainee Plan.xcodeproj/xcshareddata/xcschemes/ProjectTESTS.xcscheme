@@ -38,6 +38,11 @@
                BlueprintName = "ProjectTESTSTests"
                ReferencedContainer = "container:Trainee Plan.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "ExampleOfUseMickTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
          <TestableReference
             skipped = "NO">
