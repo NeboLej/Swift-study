@@ -45,7 +45,7 @@ class UnderTests: UIViewController {
         view.addSubview(textField)
         
         initConstraints()
-        post()
+        //post()
     }
     
     
@@ -89,7 +89,7 @@ class UnderTests: UIViewController {
     func post() {
         let networkManager = Networking()
 
-        let handler: (DataModel)->Void = { data in print("---------------\(data.title)")}
+        let handler: (DataModel)->Void = { data in print("--------1-------\(data.title)")}
         networkManager.getReqest(completion: handler)
     }
     

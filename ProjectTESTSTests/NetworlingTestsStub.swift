@@ -30,7 +30,8 @@ class NetworlingTestsStub: XCTestCase {
 
         
         //given
-        let stubbedData = "[text]".data(using: .utf8)
+        let string = "{\"userId\": 1, \"id\": 1, \"title\": \"ololo\", \"body\": \"wtf\"}"
+        let stubbedData = string.data(using: .utf8)
         let urlString = "https://jsonplaceholder.typicode.com/posts/1"
         let url = URL(string: urlString)!
         let stubbedResponse = HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: nil)
@@ -40,9 +41,10 @@ class NetworlingTestsStub: XCTestCase {
         
         //when
         network.getReqest { data in
-            print(data)
             expectation.fulfill()
-            //XCTAssertEqual(data, "text")
+            
+        //then
+            XCTAssertEqual(data, DataModel(userId: 1, dataId: 1, title: "ololo", body: "wtf"))
         }
         
         wait(for: [expectation], timeout: 5)

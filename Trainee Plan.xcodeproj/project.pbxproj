@@ -39,7 +39,6 @@
 		D46C092E2747C100000A91FD /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C092D2747C100000A91FD /* Networking.swift */; };
 		D46C09302747C292000A91FD /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C092F2747C292000A91FD /* NetworkingTests.swift */; };
 		D46C09362747F476000A91FD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C09352747F476000A91FD /* DataModel.swift */; };
-		D46C09382747FBDE000A91FD /* NetworkTests2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C09372747FBDE000A91FD /* NetworkTests2.swift */; };
 		D46C093B2747FFF4000A91FD /* URLSessionStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C093A2747FFF4000A91FD /* URLSessionStub.swift */; };
 		D46C093D274800F6000A91FD /* NetworlingTestsStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C093C274800F6000A91FD /* NetworlingTestsStub.swift */; };
 		D4AAE592273947CE0063D486 /* URLSessionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE591273947CE0063D486 /* URLSessionVC.swift */; };
@@ -109,7 +108,6 @@
 		D46C092D2747C100000A91FD /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		D46C092F2747C292000A91FD /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		D46C09352747F476000A91FD /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		D46C09372747FBDE000A91FD /* NetworkTests2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests2.swift; sourceTree = "<group>"; };
 		D46C093A2747FFF4000A91FD /* URLSessionStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionStub.swift; sourceTree = "<group>"; };
 		D46C093C274800F6000A91FD /* NetworlingTestsStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworlingTestsStub.swift; sourceTree = "<group>"; };
 		D4AAE591273947CE0063D486 /* URLSessionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionVC.swift; sourceTree = "<group>"; };
@@ -223,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				D46C093C274800F6000A91FD /* NetworlingTestsStub.swift */,
-				D46C09372747FBDE000A91FD /* NetworkTests2.swift */,
 				D46C092F2747C292000A91FD /* NetworkingTests.swift */,
 				D46C09272747A662000A91FD /* ExampleOfUseMockTests.swift */,
 				D44CE85127455B1300311781 /* ProjectTESTSTests.swift */,
@@ -618,7 +615,6 @@
 			files = (
 				D46C09282747A662000A91FD /* ExampleOfUseMockTests.swift in Sources */,
 				D46C093D274800F6000A91FD /* NetworlingTestsStub.swift in Sources */,
-				D46C09382747FBDE000A91FD /* NetworkTests2.swift in Sources */,
 				D46C09302747C292000A91FD /* NetworkingTests.swift in Sources */,
 				D44CE85227455B1300311781 /* ProjectTESTSTests.swift in Sources */,
 			);
