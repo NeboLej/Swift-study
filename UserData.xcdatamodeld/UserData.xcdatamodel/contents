@@ -3,6 +3,7 @@
     <entity name="User" representedClassName=".UserModel" syncable="YES">
         <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isDelited" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="work" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Work" inverseName="user" inverseEntity="Work"/>
     </entity>
@@ -12,7 +13,7 @@
         <relationship name="user" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="work" inverseEntity="User"/>
     </entity>
     <elements>
-        <element name="User" positionX="-1924.34375" positionY="-17.94140625" width="128" height="103"/>
+        <element name="User" positionX="-1924.34375" positionY="-17.94140625" width="128" height="118"/>
         <element name="Work" positionX="-1564.546875" positionY="183.97265625" width="128" height="88"/>
     </elements>
 </model>

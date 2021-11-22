@@ -12,4 +12,9 @@ import CoreData
 
 public class UserModel: NSManagedObject {
 
+//    init(name: String) {
+//        super.init(context: .init(.mainQueue))
+//        self.name = name
+//    }
+    
 }

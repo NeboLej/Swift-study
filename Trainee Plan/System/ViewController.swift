@@ -46,6 +46,12 @@ class ViewController: UIViewController {
         return button
     }()
     
+    lazy var button13: UIButton = {
+        var button = initButton(title: "13 DataStorage")
+        button.addTarget(self, action: #selector(goDataStorageScreen), for: .touchUpInside)
+        return button
+    }()
+    
     
     lazy var stackView: UIStackView = {
         var stackView = UIStackView()
@@ -70,6 +76,7 @@ class ViewController: UIViewController {
     }
     
     func fillInStackView() {
+        stackView.addArrangedSubview(button13)
         stackView.addArrangedSubview(button151)
         stackView.addArrangedSubview(button152)
         stackView.addArrangedSubview(button153)
@@ -129,6 +136,11 @@ class ViewController: UIViewController {
     @objc func goRestAlamofireScreen() {
         let restAlamodireScreen = RestAlamofireVC()
         navigation(vc: restAlamodireScreen)
+    }
+    
+    @objc func goDataStorageScreen() {
+        let dataStorageScreen = DataStorageVC()
+        navigation(vc: dataStorageScreen)
     }
 
 }
