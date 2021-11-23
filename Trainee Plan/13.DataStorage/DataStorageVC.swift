@@ -49,6 +49,18 @@ class DataStorageVC: UIViewController {
         return button
     }()
     
+    private lazy var deleteButton: UIButton = {
+        var button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Delete", for: .normal)
+        button.layer.borderColor = .init(red: 102, green: 20, blue: 12, alpha: 1)
+        button.layer.borderWidth = 2
+        button.layer.cornerRadius = 40
+        button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(deleteUserTap), for: .touchUpInside)
+        return button
+    }()
+    
     private lazy var userslabel: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -65,21 +77,27 @@ class DataStorageVC: UIViewController {
         view.addSubview(nameTextField)
         view.addSubview(saveButton)
         view.addSubview(getButton)
+        view.addSubview(deleteButton)
         view.addSubview(userslabel)
         initConstraints()
-        //addDefouldUser()
-        
     }
     
-    func addDefouldUser() {
-        let user = coreDataManager.createMainUser()
-        nameTextField.text = user.name
-    }
     
     func saveUser() {
         let user = UserModel(context: coreDataManager.viewContext)
         user.name = nameTextField.text
         coreDataManager.addUser(user: user)
+    }
+    
+    func deleteUsers() {
+        let user = UserModel(context: coreDataManager.viewContext)
+        user.name = nameTextField.text
+        coreDataManager.deleteUsers(user: user)
+    }
+    
+    @objc func deleteUserTap() {
+        deleteUsers()
+        getUsers()
     }
     
     @objc func saveUserTap() {
@@ -109,14 +127,19 @@ class DataStorageVC: UIViewController {
             nameTextField.heightAnchor.constraint(equalToConstant: 50),
             
             saveButton.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 160),
-            saveButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 80),
+            saveButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 120),
             saveButton.heightAnchor.constraint(equalToConstant: 80),
             saveButton.widthAnchor.constraint(equalToConstant: 80),
             
             getButton.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 160),
-            getButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -80),
+            getButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -120),
             getButton.heightAnchor.constraint(equalToConstant: 80),
             getButton.widthAnchor.constraint(equalToConstant: 80),
+            
+            deleteButton.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 160),
+            deleteButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            deleteButton.heightAnchor.constraint(equalToConstant: 80),
+            deleteButton.widthAnchor.constraint(equalToConstant: 80),
             
             userslabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             userslabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),

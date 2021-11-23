@@ -38,24 +38,6 @@ class CoreDataManager {
     }
     
 
-    
-    func createMainUser() -> UserModel {
-        let user = UserModel(context: viewContext)
-        user.name = "Oleg"
-        user.age = 30
-        let work = WorkModel(context: viewContext)
-        work.name = "WD"
-        user.work = work
-        
-        
-        do {
-            try viewContext.save()
-        } catch let error {
-            print(error)
-        }
-        return user
-    }
-
     func addUser(user: UserModel) {
         do {
             try viewContext.save()
@@ -73,5 +55,21 @@ class CoreDataManager {
         }
         
         return []
+    }
+    
+    func deleteUsers(user: UserModel) {
+        let fetchReqest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        fetchReqest.predicate = NSPredicate(format: "name = %@", user.name!)
+        do {
+            let results = try viewContext.fetch(fetchReqest) as? [NSManagedObject]
+            guard let results = results else {return}
+            for object in results {
+                viewContext.delete(object)
+            }
+        } catch  {
+            print("Error delete User")
+        }
+               
+        
     }
 }
