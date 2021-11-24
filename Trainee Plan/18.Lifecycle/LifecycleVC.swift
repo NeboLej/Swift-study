@@ -28,6 +28,14 @@ class LifecycleVC: UIViewController {
         view.addSubview(button)
         initConstraints()
         print("18.viewDidLoad")
+
+    }
+    
+    override func loadView() {
+        super.loadView()
+        print("18.loadView")
+//        let view = UIView()
+//        self.view = view
     }
     
     

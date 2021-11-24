@@ -74,6 +74,7 @@ class ProjectTESTSUITests: XCTestCase {
         app.textFields["TextField1"].typeText("help me please")
         app.buttons["Button1"].tap()
         
+        
         let result = app.textFields["TextField1"].value as! String
                
         //then

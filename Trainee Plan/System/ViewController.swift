@@ -46,6 +46,18 @@ class ViewController: UIViewController {
         return button
     }()
     
+    lazy var button131: UIButton = {
+        var button = initButton(title: "13.1 CoreData")
+        button.addTarget(self, action: #selector(goDataStorageScreen), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var button132: UIButton = {
+        var button = initButton(title: "13.2 UserDefaults")
+        button.addTarget(self, action: #selector(goUserDefaultsScreen), for: .touchUpInside)
+        return button
+    }()
+    
     
     lazy var stackView: UIStackView = {
         var stackView = UIStackView()
@@ -70,6 +82,8 @@ class ViewController: UIViewController {
     }
     
     func fillInStackView() {
+        stackView.addArrangedSubview(button131)
+        stackView.addArrangedSubview(button132)
         stackView.addArrangedSubview(button151)
         stackView.addArrangedSubview(button152)
         stackView.addArrangedSubview(button153)
@@ -130,6 +144,16 @@ class ViewController: UIViewController {
         let restAlamodireScreen = RestAlamofireVC()
         navigation(vc: restAlamodireScreen)
     }
+    
+    @objc func goDataStorageScreen() {
+        let dataStorageScreen = DataStorageVC()
+        navigation(vc: dataStorageScreen)
+    }
+    @objc func goUserDefaultsScreen() {
+        let userDefaultsScreen = UserDefaultsVC()
+        navigation(vc: userDefaultsScreen)
+    }
+    
 
 }
 
