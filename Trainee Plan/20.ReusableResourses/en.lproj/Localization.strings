@@ -10,6 +10,11 @@
 "settingsVC_langLabel" = "language";
 "settingsVC_English" = "English";
 "settingsVC_Russian" = "Russian";
+"settingsVC_Theme" = "Themes";
+"settingsVC_Day" = "Day";
+"settingsVC_Night" = "Night";
+"settingsVC_PainEyes" = "Pain Eyes";
+"settingsVC_AcidGreen" = "Acid Green";
 
 
 "VC_Core_Data" = "Core Data";
