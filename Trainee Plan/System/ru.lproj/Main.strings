@@ -1,0 +1,12 @@
+
+/* Class = "UISegmentedControl"; 1XV-bh-BGz.segmentTitles[0] = "First"; ObjectID = "1XV-bh-BGz"; */
+"1XV-bh-BGz.segmentTitles[0]" = "First";
+
+/* Class = "UISegmentedControl"; 1XV-bh-BGz.segmentTitles[1] = "Second"; ObjectID = "1XV-bh-BGz"; */
+"1XV-bh-BGz.segmentTitles[1]" = "Second";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "Spe-1T-0p1"; */
+"Spe-1T-0p1.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Spe-1T-0p1"; */
+"Spe-1T-0p1.normalTitle" = "Button";

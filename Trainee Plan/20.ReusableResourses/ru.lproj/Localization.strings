@@ -1,0 +1,23 @@
+/* 
+  Localization.strings
+  Trainee Plan
+
+  Created by Anton Pakhomov on 24.11.2021.
+  
+*/
+
+"settingsVC_label" = "Настройки";
+"settingsVC_langLabel" = "Язык";
+"settingsVC_English" = "Английский";
+"settingsVC_Russian" = "Русский";
+
+
+"VC_Core_Data" = "Основные данные";
+"VC_User_Defaults" = "Пользовательские настройки";
+"VC_URL_Session" = "ЮРЛ Сессия";
+"VC_WebSocket" = "WEB Разъем";
+"VC_Alomofire" = "Аломофаер";
+"VC_Life_Cycle" = "Жизненнвый цикл";
+"VC_ReusableResourses" = "Многоразовые ресурсы";
+"VC_Animation" = "Анимация";
+"VC_Collection_And_Table" = "Коллекции и таблицы";

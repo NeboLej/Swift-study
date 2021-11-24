@@ -11,50 +11,56 @@ class ViewController: UIViewController {
 
     
     lazy var button21: UIButton = {
-        var button = initButton(title: "22 Animation")
+        var button = initButton(title: NSLocalizedString("VC_Animation", tableName: "Localization", bundle: .main, value: "---", comment: ""))
         button.addTarget(self, action: #selector(goAnimationScreen), for: .touchUpInside)
         return button
     }()
     
     lazy var button22: UIButton = {
-        var button = initButton(title: "21 Collection & Table")
+        var button = initButton(title: NSLocalizedString("VC_Collection_And_Table", tableName: "Localization", bundle: .main, value: "---", comment: ""))
         button.addTarget(self, action: #selector(goTableViewScreen), for: .touchUpInside)
         return button
     }()
     
     lazy var button151: UIButton = {
-        var button = initButton(title: "15.1 URLSession")
+        var button = initButton(title: NSLocalizedString("VC_URL_Session", tableName: "Localization", bundle: .main, value: "---", comment: ""))
         button.addTarget(self, action: #selector(goURLSessionScreen), for: .touchUpInside)
         return button
     }()
     
     lazy var button152: UIButton = {
-        var button = initButton(title: "15.2 WebSocket")
+        var button = initButton(title: NSLocalizedString("VC_WebSocket", tableName: "Localization", bundle: .main, value: "---", comment: ""))
         button.addTarget(self, action: #selector(goWebSocketScreen), for: .touchUpInside)
         return button
     }()
     
     lazy var button153: UIButton = {
-        var button = initButton(title: "15.3 Rest Alamofire")
+        var button = initButton(title: NSLocalizedString("VC_Alomofire", tableName: "Localization", bundle: .main, value: "---", comment: ""))
         button.addTarget(self, action: #selector(goRestAlamofireScreen), for: .touchUpInside)
         return button
     }()
     
     lazy var button18: UIButton = {
-        var button = initButton(title: "18 LifeCycle")
+        var button = initButton(title: NSLocalizedString("VC_Life_Cycle", tableName: "Localization", bundle: .main, value: "---", comment: ""))
         button.addTarget(self, action: #selector(goLifeCycleScreen), for: .touchUpInside)
         return button
     }()
     
     lazy var button131: UIButton = {
-        var button = initButton(title: "13.1 CoreData")
+        var button = initButton(title: NSLocalizedString("VC_Core_Data", tableName: "Localization", bundle: .main, value: "---", comment: ""))
         button.addTarget(self, action: #selector(goDataStorageScreen), for: .touchUpInside)
         return button
     }()
     
     lazy var button132: UIButton = {
-        var button = initButton(title: "13.2 UserDefaults")
+        var button = initButton(title: NSLocalizedString("VC_User_Defaults", tableName: "Localization", bundle: .main, value: "---", comment: ""))
         button.addTarget(self, action: #selector(goUserDefaultsScreen), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var button20: UIButton = {
+        var button = initButton(title: NSLocalizedString("VC_ReusableResourses", tableName: "Localization", bundle: .main, value: "---", comment: ""))
+        button.addTarget(self, action: #selector(goSettingVC), for: .touchUpInside)
         return button
     }()
     
@@ -88,6 +94,7 @@ class ViewController: UIViewController {
         stackView.addArrangedSubview(button152)
         stackView.addArrangedSubview(button153)
         stackView.addArrangedSubview(button18)
+        stackView.addArrangedSubview(button20)
         stackView.addArrangedSubview(button21)
         stackView.addArrangedSubview(button22)
     }
@@ -152,6 +159,11 @@ class ViewController: UIViewController {
     @objc func goUserDefaultsScreen() {
         let userDefaultsScreen = UserDefaultsVC()
         navigation(vc: userDefaultsScreen)
+    }
+    
+    @objc func goSettingVC() {
+        let settingVC = SettingsVC()
+        navigation(vc: settingVC)
     }
     
 
