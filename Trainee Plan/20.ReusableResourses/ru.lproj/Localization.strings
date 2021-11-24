@@ -10,6 +10,11 @@
 "settingsVC_langLabel" = "Язык";
 "settingsVC_English" = "Английский";
 "settingsVC_Russian" = "Русский";
+"settingsVC_Theme" = "Темы";
+"settingsVC_Day" = "Дневная";
+"settingsVC_Night" = "Ночная";
+"settingsVC_PainEyes" = "Боль";
+"settingsVC_AcidGreen" = "Ядовитый";
 
 
 "VC_Core_Data" = "Основные данные";
