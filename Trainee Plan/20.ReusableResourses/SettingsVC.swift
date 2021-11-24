@@ -66,6 +66,10 @@ class SettingsVC: UIViewController {
         view.backgroundColor = UIColor(named: "Background")
         addSubviews()
         initConstraints()
+        
+        let index = UserDefaults.standard.integer(forKey: "indexTheme")
+        themeSigmentsControl.selectedSegmentIndex = index
+        changeTheme()
     }
     
     private func addSubviews() {
@@ -75,8 +79,6 @@ class SettingsVC: UIViewController {
         view.addSubview(themeLabel)
         view.addSubview(themeSigmentsControl)
     }
-    
-
     
     @objc func controlThemeTap() {
         changeTheme()
@@ -114,6 +116,7 @@ class SettingsVC: UIViewController {
             themeLabel.textColor = customTheme.labelColor
         default: break
         }
+        UserDefaults.standard.set(indexTheme, forKey: "indexTheme")
     }
     
     @objc func controlTap() {
@@ -127,7 +130,6 @@ class SettingsVC: UIViewController {
         case 1: language = "Russian"
         default : break
         }
-        print(language)
         UserDefaults.standard.set([language], forKey: "AppleLanguages")
         UserDefaults.standard.synchronize()
     }
