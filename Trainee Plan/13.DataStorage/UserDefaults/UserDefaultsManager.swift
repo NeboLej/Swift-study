@@ -9,56 +9,31 @@ import Foundation
 
 class UserDefaultsManager {
     
+    let defaultUser = UserDefaults.standard
     
-    static var userModel: UserModelDF! {
+    private var user: UserModelDF {
         get {
-            guard let savedData = UserDefaults.standard.object(forKey: "User") as? Foundation.Data else {
-                print("tet1")
-                return nil
+            if let data = defaultUser.value(forKey: "user") as? Foundation.Data {
+                return try! PropertyListDecoder().decode(UserModelDF.self, from: data)
+            } else {
+                return UserModelDF(name: "", age: "", sex: "")
             }
-            let decodedModel = try? NSKeyedUnarchiver.unarchivedObject(ofClass: UserModelDF.self, from: savedData)
-            print("возвращаю объект \(decodedModel)")
-            return decodedModel
         }
         set {
-            let deafults = UserDefaults.standard
-            if let userModel = newValue {
-                print("начал сохранять")
-                if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: userModel, requiringSecureCoding: false) {
-                    deafults.set(savedData, forKey: "User")
-                    print("сохранил объект")
-                }
+            if let data = try? PropertyListEncoder().encode(newValue) {
+                defaultUser.set(data, forKey: "user")
             }
-            
         }
     }
     
+    func saveUser(name: String, age: String, sex: String) {
+        let user = UserModelDF(name: name, age: age, sex: sex)
+        self.user = user
+        
+    }
     
-    
-    
-//    public var nameUser: String! {
-//        get {
-//            getUser()
-//        }
-//        set {
-//            saveUserName(name: newValue)
-//        }
-//    }
-//    
-//    init(nameUser: String) {
-//        self.nameUser = nameUser
-//    }
-//    
-//    private func saveUserName(name: String) {
-//        let defaults = UserDefaults.standard
-//        defaults.set(name, forKey: "nameKey")
-//        print("Save????")
-//        
-//    }
-//    
-//    private func getUser() -> String {
-//        print("Load??? \(UserDefaults.standard.string(forKey: "nameKey") ?? "---")//" )
-//        return UserDefaults.standard.string(forKey: "nameKey") ?? "---"
-//    }
+    func getUser() -> UserModelDF {
+        self.user
+    }
     
 }

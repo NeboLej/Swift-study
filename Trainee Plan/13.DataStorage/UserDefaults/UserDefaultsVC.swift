@@ -10,6 +10,7 @@ import UIKit
 
 class UserDefaultsVC: UIViewController {
     
+    var userDM = UserDefaultsManager()
     
     private lazy var sigmentedControl: UISegmentedControl = {
         let control = UISegmentedControl(items: ["male", "female"])
@@ -33,11 +34,11 @@ class UserDefaultsVC: UIViewController {
         return textField
     }()
     
-    private lazy var passwordTextField: UITextField = {
+    private lazy var ageTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.backgroundColor = .systemBlue
-        textField.placeholder = "Password"
+        textField.placeholder = "Age"
         textField.tintColor = .systemPink
         textField.layer.cornerRadius = 10
         let spacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
@@ -66,29 +67,41 @@ class UserDefaultsVC: UIViewController {
         
         addSubviews()
         initConstraints()
+        getUser()
+    }
+    
+    private func getUser() {
+        let user = userDM.getUser()
+        nameTextField.text = user.name
+        ageTextField.text = user.age
         
-        if UserDefaultsManager.userModel != nil{
-            nameTextField.text = UserDefaultsManager.userModel.name
+        if user.sex == SexType.male.rawValue {
+            sigmentedControl.selectedSegmentIndex = 0
+        } else {
+            sigmentedControl.selectedSegmentIndex = 1
         }
-
     }
 
     @objc func saveUserTap() {
-        if nameTextField.hasText {
-            //UDmanager.nameUser = nameTextField.text
-            let newUser = UserModelDF(name: nameTextField.text!, password: "1111", sex: .male)
-            print("создал объект")
-            UserDefaultsManager.userModel = newUser
-
+        let name = nameTextField.text!
+        let age = ageTextField.text!
+        var sex = ""
+        if sigmentedControl.selectedSegmentIndex == 0 {
+            sex = SexType.male.rawValue
+        } else {
+            sex = SexType.female.rawValue
         }
-
+        
+        if !name.isEmpty && !age.isEmpty {
+            userDM.saveUser(name: name, age: age, sex: sex)
+        }     
     }
     
     
     private func addSubviews() {
         view.addSubview(sigmentedControl)
         view.addSubview(nameTextField)
-        view.addSubview(passwordTextField)
+        view.addSubview(ageTextField)
         view.addSubview(saveButton)
     }
     
@@ -100,12 +113,12 @@ class UserDefaultsVC: UIViewController {
             nameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10.0),
             nameTextField.heightAnchor.constraint(equalToConstant: 50.0),
             
-            passwordTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 20.0),
-            passwordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10.0),
-            passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10.0),
-            passwordTextField.heightAnchor.constraint(equalToConstant: 50.0),
+            ageTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 20.0),
+            ageTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10.0),
+            ageTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10.0),
+            ageTextField.heightAnchor.constraint(equalToConstant: 50.0),
             
-            sigmentedControl.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 40.0),
+            sigmentedControl.topAnchor.constraint(equalTo: ageTextField.bottomAnchor, constant: 40.0),
             sigmentedControl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10.0),
             sigmentedControl.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10.0),
             sigmentedControl.heightAnchor.constraint(equalToConstant: 50.0),
