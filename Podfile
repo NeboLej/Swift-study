@@ -6,5 +6,7 @@ target 'Trainee Plan' do
   use_frameworks!
 
   # Pods for Trainee Plan
+pod 'RxSwift', '6.2.0'
+pod 'RxCocoa', '6.2.0'
 pod 'Alamofire', '~> 5.4'
 end

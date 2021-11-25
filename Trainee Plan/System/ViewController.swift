@@ -71,6 +71,13 @@ class ViewController: UIViewController {
     }()
     
     
+    lazy var button162: UIButton = {
+        var button = initButton(title: NSLocalizedString("VC_RX", tableName: "Localization", bundle: .main, value: "---", comment: ""))
+        button.addTarget(self, action: #selector(goRxSwiftVC), for: .touchUpInside)
+        return button
+    }()
+    
+    
     lazy var stackView: UIStackView = {
         var stackView = UIStackView()
         stackView.axis = .vertical
@@ -100,6 +107,7 @@ class ViewController: UIViewController {
         stackView.addArrangedSubview(button152)
         stackView.addArrangedSubview(button153)
         stackView.addArrangedSubview(button161)
+        stackView.addArrangedSubview(button162)
         stackView.addArrangedSubview(button18)
         stackView.addArrangedSubview(button20)
         stackView.addArrangedSubview(button21)
@@ -176,6 +184,11 @@ class ViewController: UIViewController {
     @objc func goCombineVC() {
         let combineVC = CombineVC()
         navigation(vc: combineVC)
+    }
+    
+    @objc func goRxSwiftVC() {
+        let rxSwiftVC = RxSwiftVC()
+        navigation(vc: rxSwiftVC)
     }
 
 }
