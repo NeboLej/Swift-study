@@ -64,6 +64,12 @@ class ViewController: UIViewController {
         return button
     }()
     
+    lazy var button161: UIButton = {
+        var button = initButton(title: NSLocalizedString("VC_Combine", tableName: "Localization", bundle: .main, value: "---", comment: ""))
+        button.addTarget(self, action: #selector(goCombineVC), for: .touchUpInside)
+        return button
+    }()
+    
     
     lazy var stackView: UIStackView = {
         var stackView = UIStackView()
@@ -93,6 +99,7 @@ class ViewController: UIViewController {
         stackView.addArrangedSubview(button151)
         stackView.addArrangedSubview(button152)
         stackView.addArrangedSubview(button153)
+        stackView.addArrangedSubview(button161)
         stackView.addArrangedSubview(button18)
         stackView.addArrangedSubview(button20)
         stackView.addArrangedSubview(button21)
@@ -166,6 +173,10 @@ class ViewController: UIViewController {
         navigation(vc: settingVC)
     }
     
+    @objc func goCombineVC() {
+        let combineVC = CombineVC()
+        navigation(vc: combineVC)
+    }
 
 }
 

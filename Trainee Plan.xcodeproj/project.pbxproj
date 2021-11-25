@@ -56,6 +56,7 @@
 		D46C09362747F476000A91FD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C09352747F476000A91FD /* DataModel.swift */; };
 		D46C093B2747FFF4000A91FD /* URLSessionStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C093A2747FFF4000A91FD /* URLSessionStub.swift */; };
 		D46C093D274800F6000A91FD /* NetworlingTestsStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C093C274800F6000A91FD /* NetworlingTestsStub.swift */; };
+		D47FF9C5274FCCC600B2FEE1 /* CombineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FF9C4274FCCC600B2FEE1 /* CombineVC.swift */; };
 		D4AAE592273947CE0063D486 /* URLSessionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE591273947CE0063D486 /* URLSessionVC.swift */; };
 		D4AAE596273950BF0063D486 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE595273950BF0063D486 /* DataModel.swift */; };
 		D4AAE59827395AB80063D486 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE59727395AB80063D486 /* Cell.swift */; };
@@ -145,6 +146,7 @@
 		D46C09352747F476000A91FD /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		D46C093A2747FFF4000A91FD /* URLSessionStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionStub.swift; sourceTree = "<group>"; };
 		D46C093C274800F6000A91FD /* NetworlingTestsStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworlingTestsStub.swift; sourceTree = "<group>"; };
+		D47FF9C4274FCCC600B2FEE1 /* CombineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineVC.swift; sourceTree = "<group>"; };
 		D4AAE591273947CE0063D486 /* URLSessionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionVC.swift; sourceTree = "<group>"; };
 		D4AAE595273950BF0063D486 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		D4AAE59727395AB80063D486 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 		D45B88D12718643900DF470F /* Trainee Plan */ = {
 			isa = PBXGroup;
 			children = (
+				D47FF9C3274FCC6A00B2FEE1 /* 16.Reactive */,
 				D43C6A2B274E5464002121E2 /* 20.ReusableResourses */,
 				D4503871274B914000D5204C /* 13.DataStorage */,
 				D423A18B273AD59C002A61B6 /* 18.Lifecycle */,
@@ -431,6 +434,22 @@
 				D46C093A2747FFF4000A91FD /* URLSessionStub.swift */,
 			);
 			path = Stubs;
+			sourceTree = "<group>";
+		};
+		D47FF9C3274FCC6A00B2FEE1 /* 16.Reactive */ = {
+			isa = PBXGroup;
+			children = (
+				D47FF9C6274FCCD100B2FEE1 /* Combine */,
+			);
+			path = 16.Reactive;
+			sourceTree = "<group>";
+		};
+		D47FF9C6274FCCD100B2FEE1 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				D47FF9C4274FCCC600B2FEE1 /* CombineVC.swift */,
+			);
+			path = Combine;
 			sourceTree = "<group>";
 		};
 		D4AAE58F2739475D0063D486 /* 15.Networking */ = {
@@ -735,6 +754,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D47FF9C5274FCCC600B2FEE1 /* CombineVC.swift in Sources */,
 				D45038BC274BDC0900D5204C /* WorkModel+CoreDataProperties.swift in Sources */,
 				D423A188273A7B17002A61B6 /* WebSocketVC.swift in Sources */,
 				D466F5702732CE4500DF60E9 /* AnimationsVC.swift in Sources */,

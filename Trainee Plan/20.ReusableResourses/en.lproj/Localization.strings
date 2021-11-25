@@ -21,9 +21,10 @@
 "VC_User_Defaults" = "User Defaults";
 "VC_URL_Session" = "URLSession";
 "VC_WebSocket" = "WEB Socket";
-"VC_Alomofire" = "Alomofire";
+"VC_Alomofire" = "Alamofire";
 "VC_Life_Cycle" = "LifeCycle";
 "VC_ReusableResourses" = "Reusable resourses";
 "VC_Animation" = "Animation";
 "VC_Collection_And_Table" = "Collection & Table";
+"VC_Combine" = "Combine";
 
