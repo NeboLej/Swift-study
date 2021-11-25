@@ -11,6 +11,7 @@ class UserDefaultsManager {
     
     let defaultUser = UserDefaults.standard
     
+    
     private var user: UserModelDF {
         get {
             if let data = defaultUser.value(forKey: "user") as? Foundation.Data {
