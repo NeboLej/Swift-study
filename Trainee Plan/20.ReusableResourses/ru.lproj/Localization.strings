@@ -21,8 +21,9 @@
 "VC_User_Defaults" = "Пользовательские настройки";
 "VC_URL_Session" = "ЮРЛ Сессия";
 "VC_WebSocket" = "WEB Разъем";
-"VC_Alomofire" = "Аломофаер";
+"VC_Alomofire" = "Аламофайр";
 "VC_Life_Cycle" = "Жизненнвый цикл";
 "VC_ReusableResourses" = "Многоразовые ресурсы";
 "VC_Animation" = "Анимация";
 "VC_Collection_And_Table" = "Коллекции и таблицы";
+"VC_Combine" = "Комбинировать";
