@@ -14,7 +14,7 @@ import RxCocoa
 
 class RxSwiftVC: UIViewController {
     
-    var isIncluded = (value: true)
+    var isIncluded = BehaviorRelay(value: true)
     var generalText = PublishSubject<String>()
     var time = PublishSubject<Int>()
     
