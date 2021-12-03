@@ -32,10 +32,10 @@ class LifecycleVC: UIViewController {
     }
     
     override func loadView() {
-        super.loadView()
+        //super.loadView()
         print("18.loadView")
-//        let view = UIView()
-//        self.view = view
+        let view = UIView()
+        self.view = view
     }
     
     

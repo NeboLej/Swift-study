@@ -17,6 +17,7 @@
 "settingsVC_AcidGreen" = "Acid Green";
 
 
+
 "VC_Core_Data" = "Core Data";
 "VC_User_Defaults" = "User Defaults";
 "VC_URL_Session" = "URLSession";
@@ -27,4 +28,5 @@
 "VC_Animation" = "Animation";
 "VC_Collection_And_Table" = "Collection & Table";
 "VC_Combine" = "Combine";
+"VC_RX" = "RxSwift";
 

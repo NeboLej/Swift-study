@@ -42,6 +42,7 @@ class CombineVC: UIViewController {
         addSubviews()
         addConstrains()
         
+        // instance 1
         subscriber = $isIncluded.receive(on: DispatchQueue.main).assign(to: \.isEnabled, on: button1)
     }
     

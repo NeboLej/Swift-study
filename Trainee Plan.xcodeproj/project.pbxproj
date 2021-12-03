@@ -57,6 +57,7 @@
 		D46C093B2747FFF4000A91FD /* URLSessionStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C093A2747FFF4000A91FD /* URLSessionStub.swift */; };
 		D46C093D274800F6000A91FD /* NetworlingTestsStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C093C274800F6000A91FD /* NetworlingTestsStub.swift */; };
 		D47FF9C5274FCCC600B2FEE1 /* CombineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FF9C4274FCCC600B2FEE1 /* CombineVC.swift */; };
+		D483B9FC274FE36E00187F9C /* RxSwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D483B9FB274FE36E00187F9C /* RxSwiftVC.swift */; };
 		D4AAE592273947CE0063D486 /* URLSessionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE591273947CE0063D486 /* URLSessionVC.swift */; };
 		D4AAE596273950BF0063D486 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE595273950BF0063D486 /* DataModel.swift */; };
 		D4AAE59827395AB80063D486 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE59727395AB80063D486 /* Cell.swift */; };
@@ -147,6 +148,7 @@
 		D46C093A2747FFF4000A91FD /* URLSessionStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionStub.swift; sourceTree = "<group>"; };
 		D46C093C274800F6000A91FD /* NetworlingTestsStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworlingTestsStub.swift; sourceTree = "<group>"; };
 		D47FF9C4274FCCC600B2FEE1 /* CombineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineVC.swift; sourceTree = "<group>"; };
+		D483B9FB274FE36E00187F9C /* RxSwiftVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftVC.swift; sourceTree = "<group>"; };
 		D4AAE591273947CE0063D486 /* URLSessionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionVC.swift; sourceTree = "<group>"; };
 		D4AAE595273950BF0063D486 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		D4AAE59727395AB80063D486 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
@@ -439,6 +441,7 @@
 		D47FF9C3274FCC6A00B2FEE1 /* 16.Reactive */ = {
 			isa = PBXGroup;
 			children = (
+				D483B9FA274FE35400187F9C /* RxSwift */,
 				D47FF9C6274FCCD100B2FEE1 /* Combine */,
 			);
 			path = 16.Reactive;
@@ -450,6 +453,14 @@
 				D47FF9C4274FCCC600B2FEE1 /* CombineVC.swift */,
 			);
 			path = Combine;
+			sourceTree = "<group>";
+		};
+		D483B9FA274FE35400187F9C /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				D483B9FB274FE36E00187F9C /* RxSwiftVC.swift */,
+			);
+			path = RxSwift;
 			sourceTree = "<group>";
 		};
 		D4AAE58F2739475D0063D486 /* 15.Networking */ = {
@@ -780,6 +791,7 @@
 				D45B88D32718643900DF470F /* AppDelegate.swift in Sources */,
 				D423A18A273A8916002A61B6 /* ResponseModel.swift in Sources */,
 				D456FC2B274D37000085A16D /* UserModelDF.swift in Sources */,
+				D483B9FC274FE36E00187F9C /* RxSwiftVC.swift in Sources */,
 				D456FC2E274D38730085A16D /* UserDefaultsManager.swift in Sources */,
 				D4AAE59A2739643C0063D486 /* NetworkManager.swift in Sources */,
 				D45038BB274BDC0900D5204C /* WorkModel+CoreDataClass.swift in Sources */,
