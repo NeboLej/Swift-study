@@ -14,7 +14,7 @@ import RxCocoa
 
 class RxSwiftVC: UIViewController {
     
-    var isIncluded = BehaviorRelay(value: true)
+    var isIncluded = BehaviorRelay(value: false)
     var generalText = PublishSubject<String>()
     var time = PublishSubject<Int>()
     
@@ -32,7 +32,7 @@ class RxSwiftVC: UIViewController {
         var swith = UISwitch()
         swith.translatesAutoresizingMaskIntoConstraints = false
         swith.onTintColor = .systemPink
-        swith.isOn = true
+        //swith.isOn = true
         swith.addTarget(self, action: #selector(switchEvent), for: .touchUpInside)
         return swith
     }()
