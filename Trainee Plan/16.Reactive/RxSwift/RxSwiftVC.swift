@@ -77,7 +77,7 @@ class RxSwiftVC: UIViewController {
         }.disposed(by: bag)
 
         
-        // instance 4
+         //instance 4
 //        time.filter { event in
 //            event % 2 == 0
 //        }.subscribe { event in
@@ -108,8 +108,6 @@ class RxSwiftVC: UIViewController {
             self?.button1.isEnabled = value
             self?.textField.isEnabled = value
         }).disposed(by: bag)
-        
-        
 
     }
     
