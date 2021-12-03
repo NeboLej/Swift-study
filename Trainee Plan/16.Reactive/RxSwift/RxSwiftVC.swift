@@ -17,6 +17,7 @@ class RxSwiftVC: UIViewController {
     var isIncluded = BehaviorRelay(value: false)
     var generalText = PublishSubject<String>()
     var time = PublishSubject<Int>()
+    var test = ReplaySubject<String>.create(bufferSize: 3)
     
     
     private lazy var button1: UIButton = {
