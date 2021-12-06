@@ -15,6 +15,7 @@
 		D43C6A35274E63D6002121E2 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = D43C6A37274E63D6002121E2 /* Localization.strings */; };
 		D43C6A3A274E775E002121E2 /* Themes.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D43C6A39274E775E002121E2 /* Themes.xcassets */; };
 		D43C6A3C274E839B002121E2 /* CustomTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43C6A3B274E839B002121E2 /* CustomTheme.swift */; };
+		D43D587B275A5BCA008F922A /* SOLID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43D587A275A5BCA008F922A /* SOLID.swift */; };
 		D43DBFFF271EF27A00740A77 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43DBFFE271EF27A00740A77 /* CountryModel.swift */; };
 		D43DC001271EF37100740A77 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43DC000271EF37100740A77 /* Data.swift */; };
 		D43DC003271EF4D600740A77 /* CountryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43DC002271EF4D600740A77 /* CountryVC.swift */; };
@@ -99,6 +100,7 @@
 		D43C6A38274E63DA002121E2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localization.strings; sourceTree = "<group>"; };
 		D43C6A39274E775E002121E2 /* Themes.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Themes.xcassets; sourceTree = "<group>"; };
 		D43C6A3B274E839B002121E2 /* CustomTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTheme.swift; sourceTree = "<group>"; };
+		D43D587A275A5BCA008F922A /* SOLID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOLID.swift; sourceTree = "<group>"; };
 		D43DBFFE271EF27A00740A77 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		D43DC000271EF37100740A77 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D43DC002271EF4D600740A77 /* CountryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryVC.swift; sourceTree = "<group>"; };
@@ -243,6 +245,14 @@
 			path = 20.ReusableResourses;
 			sourceTree = "<group>";
 		};
+		D43D5879275A5BAB008F922A /* 42.SOLID */ = {
+			isa = PBXGroup;
+			children = (
+				D43D587A275A5BCA008F922A /* SOLID.swift */,
+			);
+			path = 42.SOLID;
+			sourceTree = "<group>";
+		};
 		D43DBFFD271EE73800740A77 /* 21.Collection and Table  */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +376,7 @@
 		D45B88D12718643900DF470F /* Trainee Plan */ = {
 			isa = PBXGroup;
 			children = (
+				D43D5879275A5BAB008F922A /* 42.SOLID */,
 				D47FF9C3274FCC6A00B2FEE1 /* 16.Reactive */,
 				D43C6A2B274E5464002121E2 /* 20.ReusableResourses */,
 				D4503871274B914000D5204C /* 13.DataStorage */,
@@ -775,6 +786,7 @@
 				D440714027206B8F00314138 /* CountryTVCell.swift in Sources */,
 				D43C6A2E274E54B4002121E2 /* SettingsVC.swift in Sources */,
 				D45B88E92718677700DF470F /* Basics.swift in Sources */,
+				D43D587B275A5BCA008F922A /* SOLID.swift in Sources */,
 				D4AAE596273950BF0063D486 /* DataModel.swift in Sources */,
 				D43DBFFF271EF27A00740A77 /* CountryModel.swift in Sources */,
 				D45B88D72718643900DF470F /* ViewController.swift in Sources */,
