@@ -76,7 +76,11 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(goRxSwiftVC), for: .touchUpInside)
         return button
     }()
-    
+    lazy var button111: UIButton = {
+        var button = initButton(title: NSLocalizedString("VC_GCD", tableName: "Localization", bundle: .main, value: "---", comment: ""))
+        button.addTarget(self, action: #selector(goGCDVC), for: .touchUpInside)
+        return button
+    }()
     
     lazy var stackView: UIStackView = {
         var stackView = UIStackView()
@@ -101,6 +105,7 @@ class ViewController: UIViewController {
     }
     
     func fillInStackView() {
+        stackView.addArrangedSubview(button111)
         stackView.addArrangedSubview(button131)
         stackView.addArrangedSubview(button132)
         stackView.addArrangedSubview(button151)
@@ -189,6 +194,11 @@ class ViewController: UIViewController {
     @objc func goRxSwiftVC() {
         let rxSwiftVC = RxSwiftVC()
         navigation(vc: rxSwiftVC)
+    }
+    
+    @objc func goGCDVC() {
+        let GCDVC = GCDVC()
+        navigation(vc: GCDVC)
     }
 
 }
