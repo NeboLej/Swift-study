@@ -1,39 +1,56 @@
 import Foundation
 import UIKit
 
-class GCDVC: ViewController {
+class GCDVC: UIViewController {
     
     lazy var button1: UIButton = {
-        var button = UIButton(type: .system)
+        var button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = UIColor(displayP3Red: CGFloat.random(in: 0...1 ), green: CGFloat.random(in: 0...1 ), blue: CGFloat.random(in: 0...1 ), alpha: 1)
+        button.addTarget(self, action: #selector(simpleMethod), for: .touchUpInside)
+        button.setTitle("Simple Method", for: .normal)
         return button
     }()
     lazy var button2: UIButton = {
-        var button = UIButton(type: .system)
+        var button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = UIColor(displayP3Red: CGFloat.random(in: 0...1 ), green: CGFloat.random(in: 0...1 ), blue: CGFloat.random(in: 0...1 ), alpha: 1)
+        button.addTarget(self, action: #selector(simpleMethodGlobalQueue), for: .touchUpInside)
+        button.setTitle("Simple Method GlobalQueue", for: .normal)
         return button
     }()
     lazy var button3: UIButton = {
-        var button = UIButton(type: .system)
+        var button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = UIColor(displayP3Red: CGFloat.random(in: 0...1 ), green: CGFloat.random(in: 0...1 ), blue: CGFloat.random(in: 0...1 ), alpha: 1)
+        button.addTarget(self, action: #selector(cycle), for: .touchUpInside)
+        button.setTitle("Simple Cycle", for: .normal)
         return button
     }()
     lazy var button4: UIButton = {
-        var button = UIButton(type: .system)
+        var button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = UIColor(displayP3Red: CGFloat.random(in: 0...1 ), green: CGFloat.random(in: 0...1 ), blue: CGFloat.random(in: 0...1 ), alpha: 1)
+        button.addTarget(self, action: #selector(multiCycle), for: .touchUpInside)
+        button.setTitle("Concurrent Cycle", for: .normal)
         return button
     }()
     lazy var button5: UIButton = {
-        var button = UIButton(type: .system)
+        var button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = UIColor(displayP3Red: CGFloat.random(in: 0...1 ), green: CGFloat.random(in: 0...1 ), blue: CGFloat.random(in: 0...1 ), alpha: 1)
         return button
     }()
     
+    private lazy var langSigmentsControl: UISegmentedControl = {
+        let control = UISegmentedControl(items: ["1", "2"])
+        control.translatesAutoresizingMaskIntoConstraints = false
+        control.backgroundColor = .systemBlue
+        control.setTitle("Тык", forSegmentAt: 0)
+        control.setTitle("Тык", forSegmentAt: 1)
+        control.backgroundColor = UIColor(named: "Button")
+        return control
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +68,7 @@ class GCDVC: ViewController {
         view.addSubview(button3)
         view.addSubview(button4)
         view.addSubview(button5)
+        view.addSubview(langSigmentsControl)
     }
     
     private func addConstraints() {
@@ -80,7 +98,45 @@ class GCDVC: ViewController {
             button5.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             button5.heightAnchor.constraint(equalToConstant: 30),
             
+            langSigmentsControl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40.0),
+            langSigmentsControl.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            langSigmentsControl.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            langSigmentsControl.heightAnchor.constraint(equalToConstant: 30),
+            
         ])
+    }
+    
+    
+    @objc func simpleMethod() {
+        print("1 --- Start")
+        sleep(5)
+        print("1 --- Finish")
+    }
+    
+    @objc func simpleMethodGlobalQueue() {
+        DispatchQueue.global().async
+        {
+            print("1 --- Start")
+            sleep(5)
+            print("1 --- Finish")
+        }
+    }
+    
+    @objc func cycle() {
+        for i in 0...500000 {
+            print(i)
+        }
+    }
+    
+    @objc func multiCycle() {
+        let queue = DispatchQueue.global(qos: .utility)
+        
+        queue.async {
+            DispatchQueue.concurrentPerform(iterations: 500000) {
+                print("\($0)")
+                print(Thread.current)
+            }
+        }
     }
     
 }
