@@ -38,6 +38,7 @@
 		D45038BE274BDC0900D5204C /* UserModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45038BA274BDC0900D5204C /* UserModel+CoreDataProperties.swift */; };
 		D45038C0274BDE3A00D5204C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45038BF274BDE3A00D5204C /* CoreDataManager.swift */; };
 		D45038C2274BDE5E00D5204C /* DataStorageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45038C1274BDE5E00D5204C /* DataStorageVC.swift */; };
+		D454F0222760912B00A22FBF /* GCDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454F0212760912B00A22FBF /* GCDVC.swift */; };
 		D456FC29274D25DE0085A16D /* UserDefaultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D456FC28274D25DE0085A16D /* UserDefaultsVC.swift */; };
 		D456FC2B274D37000085A16D /* UserModelDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = D456FC2A274D37000085A16D /* UserModelDF.swift */; };
 		D456FC2E274D38730085A16D /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D456FC2D274D38730085A16D /* UserDefaultsManager.swift */; };
@@ -128,6 +129,7 @@
 		D45038BA274BDC0900D5204C /* UserModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D45038BF274BDE3A00D5204C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D45038C1274BDE5E00D5204C /* DataStorageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorageVC.swift; sourceTree = "<group>"; };
+		D454F0212760912B00A22FBF /* GCDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDVC.swift; sourceTree = "<group>"; };
 		D456FC28274D25DE0085A16D /* UserDefaultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsVC.swift; sourceTree = "<group>"; };
 		D456FC2A274D37000085A16D /* UserModelDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelDF.swift; sourceTree = "<group>"; };
 		D456FC2D274D38730085A16D /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
@@ -319,6 +321,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D454F0202760910200A22FBF /* Multithreading */ = {
+			isa = PBXGroup;
+			children = (
+				D454F0212760912B00A22FBF /* GCDVC.swift */,
+			);
+			path = Multithreading;
+			sourceTree = "<group>";
+		};
 		D456FC26274D25780085A16D /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +386,7 @@
 		D45B88D12718643900DF470F /* Trainee Plan */ = {
 			isa = PBXGroup;
 			children = (
+				D454F0202760910200A22FBF /* Multithreading */,
 				D43D5879275A5BAB008F922A /* 42.SOLID */,
 				D47FF9C3274FCC6A00B2FEE1 /* 16.Reactive */,
 				D43C6A2B274E5464002121E2 /* 20.ReusableResourses */,
@@ -808,6 +819,7 @@
 				D4AAE59A2739643C0063D486 /* NetworkManager.swift in Sources */,
 				D45038BB274BDC0900D5204C /* WorkModel+CoreDataClass.swift in Sources */,
 				D45B88D52718643900DF470F /* SceneDelegate.swift in Sources */,
+				D454F0222760912B00A22FBF /* GCDVC.swift in Sources */,
 				D45038C2274BDE5E00D5204C /* DataStorageVC.swift in Sources */,
 				D43DC003271EF4D600740A77 /* CountryVC.swift in Sources */,
 			);
