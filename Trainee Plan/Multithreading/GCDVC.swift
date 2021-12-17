@@ -340,7 +340,6 @@ class GCDVC: UIViewController {
             print("three")
             groupOne.leave()
         }
-        
         groupOne.wait()
         print("Finish all")
         
@@ -364,7 +363,8 @@ class GCDVC: UIViewController {
         
         let queue = OperationQueue() //автоматически создает канкарент очередь
         queue.addOperation(operation)
-        sleep(1)
+        //sleep(1)
+        queue.waitUntilAllOperationsAreFinished()
         print(string)
     }
     
@@ -387,14 +387,24 @@ class GCDVC: UIViewController {
         let operation3 = BlockOperation {
             sleep(3)
             print("operation3")
+//            operation2.cancel()
+//            print(operation2.isCancelled)
+            print(Thread.current)
+        }
+        let operation4 = BlockOperation {
+            sleep(1)
+            print("operation4")
             operation2.cancel()
             print(operation2.isCancelled)
             print(Thread.current)
         }
         
         let queue = OperationQueue()
+        let queue1 = OperationQueue()
+
         queue.addOperation(operation1)
         queue.addOperation(operation2)
+        queue1.addOperation(operation4)
         queue.addOperation(operation3)
         //operation2.cancel()
     }
