@@ -102,7 +102,7 @@ class ViewController: UIViewController {
         initConstraints()
         fillInStackView()
         
-        functional()
+//        functional()
 
     }
     

@@ -31,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
         // вызывается при переходе сцены их бэграунда в фограунд
-        // испольхуйте этот метод чтобы отменить изменения сделанные при входе на фон
+        // используйте этот метод чтобы отменить изменения сделанные при входе на фон
         print("18.SceneDelegate sceneWillEnterForeground")
     }
     
@@ -39,7 +39,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
         // вызывается когда сцена перешла из неактивного состояния в активное
-        // используйте этот метод для презапуска любых задач, которые были приостановлены (или ще не запущены) когда сцены была неактивна
+        // используйте этот метод для презапуска любых задач, которые были приостановлены (или же не запущены) когда сцены была неактивна
         print("18.SceneDelegate sceneDidBecomeActive")
     }
     
