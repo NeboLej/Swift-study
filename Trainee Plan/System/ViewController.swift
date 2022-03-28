@@ -101,7 +101,19 @@ class ViewController: UIViewController {
         view.addSubview(stackView)
         initConstraints()
         fillInStackView()
+        
+        functional()
 
+    }
+    
+    //test FunctionalProgramming
+    func functional() {
+        let fp = FunctionalProgramming()
+        fp.map_()
+        fp.compactMap_()
+        fp.filter_()
+        fp.reduce_()
+        fp.flatMap_()
     }
     
     func fillInStackView() {

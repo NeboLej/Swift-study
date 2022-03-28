@@ -66,6 +66,7 @@
 		D4AAE59A2739643C0063D486 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE5992739643C0063D486 /* NetworkManager.swift */; };
 		D4AAE59C2739960B0063D486 /* WebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AAE59B2739960B0063D486 /* WebSocketService.swift */; };
 		E6955819311F60B2A74244B0 /* Pods_Trainee_Plan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E21812713551E8397128949A /* Pods_Trainee_Plan.framework */; };
+		FA55856827F266FB00A58AB9 /* FunctionalProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55856727F266FB00A58AB9 /* FunctionalProgramming.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +160,7 @@
 		D4AAE5992739643C0063D486 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D4AAE59B2739960B0063D486 /* WebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketService.swift; sourceTree = "<group>"; };
 		E21812713551E8397128949A /* Pods_Trainee_Plan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trainee_Plan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA55856727F266FB00A58AB9 /* FunctionalProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalProgramming.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,6 +388,7 @@
 		D45B88D12718643900DF470F /* Trainee Plan */ = {
 			isa = PBXGroup;
 			children = (
+				FA55856627F266C100A58AB9 /* Functional */,
 				D454F0202760910200A22FBF /* Multithreading */,
 				D43D5879275A5BAB008F922A /* 42.SOLID */,
 				D47FF9C3274FCC6A00B2FEE1 /* 16.Reactive */,
@@ -506,6 +509,14 @@
 				D423A189273A8916002A61B6 /* ResponseModel.swift */,
 			);
 			path = URLSession;
+			sourceTree = "<group>";
+		};
+		FA55856627F266C100A58AB9 /* Functional */ = {
+			isa = PBXGroup;
+			children = (
+				FA55856727F266FB00A58AB9 /* FunctionalProgramming.swift */,
+			);
+			path = Functional;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -791,6 +802,7 @@
 				D45038BC274BDC0900D5204C /* WorkModel+CoreDataProperties.swift in Sources */,
 				D423A188273A7B17002A61B6 /* WebSocketVC.swift in Sources */,
 				D466F5702732CE4500DF60E9 /* AnimationsVC.swift in Sources */,
+				FA55856827F266FB00A58AB9 /* FunctionalProgramming.swift in Sources */,
 				D43DC001271EF37100740A77 /* Data.swift in Sources */,
 				D4AAE592273947CE0063D486 /* URLSessionVC.swift in Sources */,
 				D43C3386271DA612009CF824 /* LifecycleVC.swift in Sources */,
